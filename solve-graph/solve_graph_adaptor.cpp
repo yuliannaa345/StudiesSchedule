@@ -18,7 +18,6 @@ auto makeSameColoredGraph(Coloring const& coloring)
     for (VertexIndex i = 0; i < n; ++i)
         byColor[coloring[i]].push_back(i);
 
-    // соединяем вершины одинакового цвета
     for (auto const& [color, vertices] : byColor)
     {
         for (std::size_t i = 0; i < vertices.size(); ++i)
@@ -67,5 +66,6 @@ void updateForbiddenColorsForSubjectGraph(
         }
     }
 }
+
 
 }
